@@ -12,12 +12,19 @@ for(int i=0;i<n;i++){
 }
 }
 int sum_composite(int n,int a[n]){
-  int sum;
+  int sum=0,count=0;
   for(int i=0;i<n;i++){
     for(int j=2;j<a[i];j++){
-    if(a[i]%j==0){
-sum+=a[i];
-    }}}
+    if(a[i]%j==0)
+    {
+      count+=1;
+    }
+    }
+    if(count>=1){
+      sum+=a[i];
+    }
+    }
+    
     return sum;
 }
 void output(int sum){
