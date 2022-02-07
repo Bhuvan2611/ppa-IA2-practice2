@@ -1,8 +1,9 @@
 #include <stdio.h>
-void input(){
+int input(){
   int n;
   printf("enter the size of an array\n");
   scanf("%d",&n);
+  return n;
 }
 void input_array(int n,int a[n]){
 printf("enter the numbers");
@@ -24,7 +25,7 @@ void output(int sum){
 }
 void main(){
   int n,sum;
-  input();
+  n=input();
   int a[n];
   input_array(n,a);
   sum=sum_composite(n,a);
